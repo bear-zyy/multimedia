@@ -44,9 +44,14 @@ static NSString * photosCellID = @"PhotosCollectionCell";
 
     [self setNav];
     self.editType = noneEditType;
-    self.dataArray = [NSMutableArray arrayWithArray: [[FMDBManager shareManager] selectAllMediaTableData]];
-
-    [self.collectionView reloadData];
+    if (self.opreationType == localVCType) {
+        self.dataArray = [NSMutableArray arrayWithArray: [[FMDBManager shareManager] selectAllMediaTableData]];
+        [self.collectionView reloadData];
+    }
+    else{
+        self.dataArray = [NSMutableArray array];
+        [self requestSystemPhotos];
+    }
     
     self.collectionBottomHight.constant = 0;
     
@@ -142,12 +147,18 @@ static NSString * photosCellID = @"PhotosCollectionCell";
     
     __weak typeof(self) weakSelf = self;
     
-     cell.model = self.dataArray[indexPath.row];
-//     cell.editType = self.editType;
+    if (self.opreationType == localVCType) {
+        cell.model = self.dataArray[indexPath.row];
+        //     cell.editType = self.editType;
+        
+        cell.photoSelectBlock = ^(mediaModel *model, BOOL isSelected) {
+            [weakSelf photoSelectMethod:model isSelect:isSelected];
+        };
+    }
+    else{
+        cell.asset = self.dataArray[indexPath.row];
+    }
     
-     cell.photoSelectBlock = ^(mediaModel *model, BOOL isSelected) {
-         [weakSelf photoSelectMethod:model isSelect:isSelected];
-     };
     
     return cell;
 }

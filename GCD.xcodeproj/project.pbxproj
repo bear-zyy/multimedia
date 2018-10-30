@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A43D915120B2AE2900093F6F /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D915020B2AE2900093F6F /* SemaphoreViewController.m */; };
 		A44DD81E20CE5DE5007955AA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44DD81D20CE5DE5007955AA /* Launch Screen.storyboard */; };
+		A45500B12148BA8E004D06F2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A45500B02148BA8E004D06F2 /* libxml2.tbd */; };
+		A45500B32148BAAF004D06F2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A45500B22148BAAF004D06F2 /* libresolv.tbd */; };
 		A467A16B211A919700D99120 /* AuthorizingAccessTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A169211A919700D99120 /* AuthorizingAccessTool.m */; };
 		A467A16F211AD73300D99120 /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A467A16C211AD73200D99120 /* PhotosViewController.xib */; };
 		A467A170211AD73300D99120 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A16E211AD73300D99120 /* PhotosViewController.m */; };
@@ -71,6 +73,8 @@
 		A43D914F20B2AE2900093F6F /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		A43D915020B2AE2900093F6F /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		A44DD81D20CE5DE5007955AA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A45500B02148BA8E004D06F2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		A45500B22148BAAF004D06F2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		A467A169211A919700D99120 /* AuthorizingAccessTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizingAccessTool.m; sourceTree = "<group>"; };
 		A467A16A211A919700D99120 /* AuthorizingAccessTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizingAccessTool.h; sourceTree = "<group>"; };
 		A467A16C211AD73200D99120 /* PhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45500B32148BAAF004D06F2 /* libresolv.tbd in Frameworks */,
+				A45500B12148BA8E004D06F2 /* libxml2.tbd in Frameworks */,
 				A49979CE20F5FB0C00D3E01C /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +209,8 @@
 		A49979CC20F5FB0C00D3E01C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A45500B22148BAAF004D06F2 /* libresolv.tbd */,
+				A45500B02148BA8E004D06F2 /* libxml2.tbd */,
 				A49979CD20F5FB0C00D3E01C /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -648,6 +656,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P84Y4645A9;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = GCD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,6 +676,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P84Y4645A9;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = GCD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

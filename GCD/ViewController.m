@@ -59,7 +59,7 @@
     
     NSLog(@"%@" , str);//手机剩余存储空间为：5101 MB
     
-    self.array = @[@"串行对列",@"查看拍摄的照片和视频",@"第三方拍照",@"拍照" , @"系统相机"];
+    self.array = @[@"串行对列",@"查看拍摄的照片和视频",@"第三方拍照",@"拍照" , @"系统相机", @"查看系统相册"];
     [self.tableview reloadData];
     
     self.imageView = [[UIImageView alloc] init];
@@ -103,8 +103,9 @@
         [self presentViewController:vc animated:YES completion:nil];
     }
     else if (indexPath.row == 1){
-        
-        [self presentViewController:[PhotosViewController new] animated:YES completion:nil];
+        PhotosViewController * vc = [PhotosViewController new];
+        vc.opreationType = localVCType;
+        [self presentViewController:vc animated:YES completion:nil];
         
     }
     if (indexPath.row == 2) {
@@ -180,6 +181,11 @@
         imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
         [self presentViewController:imagePickerController animated:YES completion:nil];
         
+    }
+    else if (indexPath.row == 5){
+        PhotosViewController * vc = [PhotosViewController new];
+        vc.opreationType = systemVCType;
+        [self presentViewController:[PhotosViewController new] animated:YES completion:nil];
     }
 }
 
