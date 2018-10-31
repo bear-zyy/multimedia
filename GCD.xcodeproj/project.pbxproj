@@ -11,6 +11,9 @@
 		A44DD81E20CE5DE5007955AA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44DD81D20CE5DE5007955AA /* Launch Screen.storyboard */; };
 		A45500B12148BA8E004D06F2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A45500B02148BA8E004D06F2 /* libxml2.tbd */; };
 		A45500B32148BAAF004D06F2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A45500B22148BAAF004D06F2 /* libresolv.tbd */; };
+		A458D7112189422900800B23 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A458D70F2189422900800B23 /* StoreViewController.m */; };
+		A458D7122189422900800B23 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A458D7102189422900800B23 /* StoreViewController.xib */; };
+		A458D7152189557900800B23 /* standardClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A458D7142189557900800B23 /* standardClass.m */; };
 		A467A16B211A919700D99120 /* AuthorizingAccessTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A169211A919700D99120 /* AuthorizingAccessTool.m */; };
 		A467A16F211AD73300D99120 /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A467A16C211AD73200D99120 /* PhotosViewController.xib */; };
 		A467A170211AD73300D99120 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A16E211AD73300D99120 /* PhotosViewController.m */; };
@@ -75,6 +78,11 @@
 		A44DD81D20CE5DE5007955AA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A45500B02148BA8E004D06F2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		A45500B22148BAAF004D06F2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		A458D70E2189422900800B23 /* StoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		A458D70F2189422900800B23 /* StoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		A458D7102189422900800B23 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		A458D7132189557900800B23 /* standardClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = standardClass.h; sourceTree = "<group>"; };
+		A458D7142189557900800B23 /* standardClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = standardClass.m; sourceTree = "<group>"; };
 		A467A169211A919700D99120 /* AuthorizingAccessTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizingAccessTool.m; sourceTree = "<group>"; };
 		A467A16A211A919700D99120 /* AuthorizingAccessTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizingAccessTool.h; sourceTree = "<group>"; };
 		A467A16C211AD73200D99120 /* PhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
@@ -264,6 +272,11 @@
 				A49979D020F5FB5300D3E01C /* FMDBManager.m */,
 				A467A179211AD9AB00D99120 /* mediaModel.h */,
 				A467A17A211AD9AB00D99120 /* mediaModel.m */,
+				A458D70E2189422900800B23 /* StoreViewController.h */,
+				A458D70F2189422900800B23 /* StoreViewController.m */,
+				A458D7102189422900800B23 /* StoreViewController.xib */,
+				A458D7132189557900800B23 /* standardClass.h */,
+				A458D7142189557900800B23 /* standardClass.m */,
 				A49979BB20F5FAAE00D3E01C /* fmdb */,
 				A4BEF54920AC0EEB00B0172C /* Assets.xcassets */,
 				A4BEF54E20AC0EEB00B0172C /* Info.plist */,
@@ -434,6 +447,7 @@
 				A49979B920F5B22300D3E01C /* MediaCameraVC.xib in Resources */,
 				A44DD81E20CE5DE5007955AA /* Launch Screen.storyboard in Resources */,
 				A467A175211AD79C00D99120 /* PhotosCollectionCell.xib in Resources */,
+				A458D7122189422900800B23 /* StoreViewController.xib in Resources */,
 				A4BEF54A20AC0EEB00B0172C /* Assets.xcassets in Resources */,
 				A4E30BAC20F4B694008809BD /* PureCamera.bundle in Resources */,
 				A467A16F211AD73300D99120 /* PhotosViewController.xib in Resources */,
@@ -471,6 +485,7 @@
 				A49979C720F5FAAE00D3E01C /* FMDatabase.m in Sources */,
 				A4E30BAB20F4B694008809BD /* LLSimpleCamera.m in Sources */,
 				A4E30BB120F4B694008809BD /* TOCroppedImageAttributes.m in Sources */,
+				A458D7112189422900800B23 /* StoreViewController.m in Sources */,
 				A467A17B211AD9AB00D99120 /* mediaModel.m in Sources */,
 				A49979C820F5FAAE00D3E01C /* FMDatabaseAdditions.m in Sources */,
 				A4BEF54520AC0EE400B0172C /* ViewController.m in Sources */,
@@ -479,6 +494,7 @@
 				A4E30BAF20F4B694008809BD /* TOActivityCroppedImageProvider.m in Sources */,
 				A4E30BAD20F4B694008809BD /* PureCamera.m in Sources */,
 				A49979D120F5FB5300D3E01C /* FMDBManager.m in Sources */,
+				A458D7152189557900800B23 /* standardClass.m in Sources */,
 				A4BEF55020AC0EEB00B0172C /* main.m in Sources */,
 				A4BEF54220AC0EE400B0172C /* AppDelegate.m in Sources */,
 				A467A170211AD73300D99120 /* PhotosViewController.m in Sources */,
