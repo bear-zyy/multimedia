@@ -17,19 +17,63 @@
 
 #define QSPDownloadTool_DownloadSources_Path            [QSPDownloadTool_Document_Path stringByAppendingPathComponent:@"store.data"]
 
+static NSString * stringa = @"aaaa"; //这个就是一个常量了  而且只能当前类中使用
+
+NSString * const stringb = @"bbbb";
+
+NSString * const stringC = @"cccc";
+
+//const  常量 只读，  但是作用域只限于当前类，在其他类使用extrn引用后 可以改变了
 @implementation StoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSDictionary * dict = @{@"key":@"value"};
+
     NSData * data = [NSKeyedArchiver archivedDataWithRootObject:dict];
-    
+
     [data writeToFile:QSPDownloadTool_DownloadSources_Path atomically:YES];
-    
+
     [[NSUserDefaults standardUserDefaults] setObject:@"aaa" forKey:@"key"];
 
     [standardClass standard].array = @[@"1",@"2"];
+
+    [self staticMethod];
+
+    [[standardClass standard]hahah];
+
+    NSLog(@"%@" , stringb);
+
+    static int a = 10;
+    NSLog(@"%d" , a);
+
+    for (int i= 0 ; i<3; i++) {
+        [self test];
+    }
+
+    [self constMethod];
+}
+
+-(void)constMethod{
+    
+    
+}
+//static 静态变量  在局部变量时，只会初始化一次 只有一个内存地址  在创建单例时有应用
+-(void)test{
+    
+    static int a = 0;
+    a++ ;
+    NSLog(@"%d" , a);
+}
+
+-(void)staticMethod{
+    
+    static int num = 4;
+    num = 5;
+    NSLog(@"%d" , num);
+    
+    
 }
 
 - (IBAction)getClick:(id)sender {

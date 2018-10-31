@@ -7,18 +7,26 @@
 //
 
 #import "standardClass.h"
+#import "StoreViewController.h"
 
 @implementation standardClass
 
-+(standardClass *)standard{
++(instancetype)standard{
     
-    static standardClass * stand = nil;
+    static standardClass * stand;
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         stand = [[standardClass alloc] init];
     });
     return stand;
+    
+}
+
+-(void)hahah{
+    
+    extern NSString * stringb;
+    NSLog(@"%@" , stringb);
     
 }
 

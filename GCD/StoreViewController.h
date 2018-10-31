@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StoreViewController : UIViewController
 
+extern NSString * const stringC;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -73,6 +73,9 @@
     
     //如果说  我是进行网络请求，比如组的数据
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSLog(@"%@" , stringC);
 }
 
 

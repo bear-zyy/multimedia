@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong , nonatomic) NSArray * array;
 
-+(standardClass *)standard;
++(instancetype)standard;
+
+-(void)hahah;
 
 @end
 
