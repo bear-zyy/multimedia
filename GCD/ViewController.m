@@ -76,6 +76,24 @@
     
     
     NSLog(@"%@" , stringC);
+    
+    UILabel * label = [[UILabel alloc]init];
+    label.text = @"测试环境";
+    label.frame = CGRectMake(300 , 1 , 100 , 50);
+    [self.view addSubview:label];
+    
+    
+#ifdef DEBUG
+    label.hidden = NO;
+#else
+    label.hidden = YES;
+#endif
+    
+#ifdef DEBUG
+    
+#endif
+    
+    //这个
 }
 
 

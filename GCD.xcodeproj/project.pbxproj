@@ -73,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A416B3B7218AF35A00DEA39C /* UrlHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlHeader.h; sourceTree = "<group>"; };
 		A43D914F20B2AE2900093F6F /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		A43D915020B2AE2900093F6F /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		A44DD81D20CE5DE5007955AA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -277,6 +278,7 @@
 				A458D7102189422900800B23 /* StoreViewController.xib */,
 				A458D7132189557900800B23 /* standardClass.h */,
 				A458D7142189557900800B23 /* standardClass.m */,
+				A416B3B7218AF35A00DEA39C /* UrlHeader.h */,
 				A49979BB20F5FAAE00D3E01C /* fmdb */,
 				A4BEF54920AC0EEB00B0172C /* Assets.xcassets */,
 				A4BEF54E20AC0EEB00B0172C /* Info.plist */,

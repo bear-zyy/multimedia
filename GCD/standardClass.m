@@ -8,8 +8,10 @@
 
 #import "standardClass.h"
 #import "StoreViewController.h"
+#import "UrlHeader.h"
 
 @implementation standardClass
+
 
 +(instancetype)standard{
     
@@ -27,6 +29,11 @@
     
     extern NSString * stringb;
     NSLog(@"%@" , stringb);
+    
+    extern NSString * url;
+    
+    
+    NSLog(@"url  ====  %@" , url);
     
 }
 
