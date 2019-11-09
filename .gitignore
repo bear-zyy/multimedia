@@ -4,3 +4,7 @@ DerivedData/
 
 ## Xcode Patch
 *.xcodeproj/*
+
+.DS_Store
+
+
