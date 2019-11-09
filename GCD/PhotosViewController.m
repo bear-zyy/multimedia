@@ -65,6 +65,9 @@ static NSString * photosCellID = @"PhotosCollectionCell";
     
 }
 
+
+
+
 -(void)setNav{
     
     
