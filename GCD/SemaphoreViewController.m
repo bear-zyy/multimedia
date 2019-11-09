@@ -7,15 +7,22 @@
 //
 
 #import "SemaphoreViewController.h"
+#import "TestOne.h"
+#import "TestTwo.h"
+#import "ViewController.h"
 
-@interface SemaphoreViewController ()
-
+@interface SemaphoreViewController ()<NSStreamDelegate>
+{
+    NSInputStream * _inputStream;
+    NSOutputStream * _outPutStream;
+}
 @end
 
 @implementation SemaphoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
     self.view.backgroundColor = [UIColor whiteColor];
     UIButton * but = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -26,8 +33,118 @@
     [self.view addSubview:but];
 //
 //    [self syncMethod];
-    [self asyncMethod];
+//    [self asyncMethod];
 //    [self group];
+//    [self testDispatch];
+    
+    [self testCancel];
+}
+
+-(void)testCancel{
+//    for (int i = 0 ; i< 10; i++) {
+    
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 ), ^{
+//
+//            sleep(4);
+//
+//            NSLog(@"%d" , i);
+//
+//        });
+        
+        NSOperationQueue * queue = [[NSOperationQueue alloc] init];
+        
+        NSInvocationOperation * op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(hhh) object:nil];
+        
+        NSInvocationOperation * op2 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(hhh2) object:nil];
+        
+        [queue addOperation:op];
+        [queue addOperation:op2];
+        
+//    }
+}
+
+-(void)hhh{
+    sleep(4);
+    NSLog(@"hhh");
+}
+
+-(void)hhh2{
+    sleep(5);
+    NSLog(@"hhh2");
+}
+
+-(void)dealloc{
+    NSLog(@"dealloc");
+}
+
+-(void)connectSocket{
+    NSString * host = @"192.168.12.90";
+    int port = 123456;
+    
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef _Null_unspecified)(host), port, &readStream, &writeStream);
+    
+    _inputStream = (__bridge NSInputStream *)(readStream);
+    _outPutStream = (__bridge NSOutputStream *)(writeStream);
+
+    _inputStream.delegate = self;
+    _outPutStream.delegate = self;
+    
+    [_inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    [_outPutStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [_inputStream open];
+    [_outPutStream open];
+    
+}
+
+-(void)login{
+    
+    NSString * string = @"zhangyuanyuan";
+    
+    NSData * data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [_outPutStream write:data.bytes maxLength:data.length];
+}
+
+-(void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode{
+    switch (eventCode) {
+        case NSStreamEventOpenCompleted:
+            NSLog(@"输入输出打开完成");
+            break;
+        case NSStreamEventHasBytesAvailable:
+            NSLog(@"有字节可读");
+            break;
+        case NSStreamEventHasSpaceAvailable:
+            NSLog(@"可以发送字节");
+            break;
+        case NSStreamEventEndEncountered:
+            [_outPutStream close];
+            [_inputStream close];
+            [_inputStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+            [_outPutStream removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+            
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)testDispatch{
+    
+    
+    dispatch_queue_t queue = dispatch_queue_create("aaaaaaaaaa", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+
+        [[TestOne shard] oneMethod];
+
+    });
+    
+    dispatch_async(queue, ^{
+
+    });
     
 }
 
@@ -111,6 +228,9 @@
 //    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
     /*
      其实 并发队列中添加多个同步任务， 其实同步任务也都是并发执行了， 但是由于同步任务不具备开启线程的能力，所以只能等主线程， 所以也导致任务都是串行执行的，即使是在并发队列中
+     如果是在串行队列中，添加了多个异步任务，
+     串行队列，只能开启一个线程，所以即使是 异步任务，有开启线程的能力，但是也没有开启线程的资源。也是一个一个执行,
+     总结来说， 串行队列和并发队列中添加同步任务，这三种类型，都是没有多开器线程。
      */
     
         //这个也是串行队列

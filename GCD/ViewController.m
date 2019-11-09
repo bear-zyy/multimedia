@@ -17,6 +17,12 @@
 #import "mediaModel.h"
 #import "FMDBManager.h"
 #import "StoreViewController.h"
+#import "NSString+one.h"
+#import "NSString+two.h"
+#import "TestOne.h"
+#import "TestOneSub.h"
+#import "AnimtionViewController.h"
+#import "TestOne+three.h"
 
 #include <sys/param.h>
 #include <sys/mount.h>
@@ -24,6 +30,10 @@
 #import "AuthorizingAccessTool.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource , UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+{
+    NSString * aaaaa;
+    
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @property (strong , nonatomic) NSArray * array;
@@ -44,23 +54,88 @@
 
 @property (strong , nonatomic) UIView * playBGView;
 
+@property (strong , nonatomic) NSTimer * testTimer;
+
+@property (copy, nonatomic) NSString * bbbbb;
+
 @end
 
+static NSString * const cellid = @"aaaaaaaa";
+
+NSString * const cellTowId = @"cccccccc";
+
+int a = 20;
+
 @implementation ViewController
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    NSLog(@"viewWillAppear");
+}
+
+-(void)loadView{
+    [super loadView];
+//    NSLog(@"loadView");
+}
+
++(void)load{
+    NSLog(@"ViewController load");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    struct statfs buf;
-    unsigned long long freeSpace = -1;
-    if (statfs("/var", &buf) >= 0) {
-        freeSpace = (unsigned long long)(buf.f_bsize * buf.f_bavail);
-    }
-    NSString *str = [NSString stringWithFormat:@"手机剩余存储空间为：%0.2lld MB",freeSpace/1024/1024];
+//    NSLog(@"viewDidLoad");
+//
+//
+//    NSString const *Str = @"不能修改";//这个地址以及浪费了
+//
+//    Str = @"能修改";
+//
+//    NSLog(@"%@" , Str);
+//
+//    NSLog(@"%@" , cellid);
     
-    NSLog(@"%@" , str);//手机剩余存储空间为：5101 MB
+//    [NSString hahhahha];
     
-    self.array = @[@"串行对列",@"查看拍摄的照片和视频",@"第三方拍照",@"拍照" , @"系统相机", @"查看系统相册",@"存取速度"];
+//    TestOne * one = [TestOne shard];
+//    
+    TestOne * two = [TestOne shard];
+    
+    two.extensionStr = @"";
+    
+    TestOneSub * three = [[TestOneSub alloc] init];
+    
+    three.extensionStr = @"";
+
+    [two testResolve];
+//
+//    NSLog(@"one  == %@" , [one valueForKey:@"propertyOne"]);
+//
+//    [one setValue:@"propertyOneOne" forKey:@"propertyOne"];
+//
+//    NSLog(@"two  == %@" , [one valueForKey:@"propertyOne"]);
+//
+    //这里其实  *Str是地址，一个存储字符串“不能修改”的地址， Str是指针， 这样的写法，就是这个地址上的数据不能修改了，但是跟指针没有多大关系。指针还是可以变成指向的地址
+    
+    
+//    _testTimer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
+//
+//    [[NSRunLoop currentRunLoop] addTimer:_testTimer forMode:NSRunLoopCommonModes];
+    
+//    _testTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerMethod) userInfo:nil repeats:true];
+    
+//    struct statfs buf;
+//    unsigned long long freeSpace = -1;
+//    if (statfs("/var", &buf) >= 0) {
+//        freeSpace = (unsigned long long)(buf.f_bsize * buf.f_bavail);
+//    }
+//    NSString *str = [NSString stringWithFormat:@"手机剩余存储空间为：%0.2lld MB",freeSpace/1024/1024];
+//
+//    NSLog(@"%@" , str);//手机剩余存储空间为：5101 MB
+//
+    self.array = @[@"串行对列",@"查看拍摄的照片和视频",@"第三方拍照",@"拍照" , @"系统相机", @"查看系统相册",@"存取速度",@"用于测试" ,@"动画"];
     [self.tableview reloadData];
     
     self.imageView = [[UIImageView alloc] init];
@@ -75,7 +150,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    NSLog(@"%@" , stringC);
+//    NSLog(@"%@" , stringC);
     
 
     //////这里是作为第一次修改 测试
@@ -101,6 +176,11 @@
     //这个
 }
 
+-(void)timerMethod{
+    
+    NSLog(@"c卧槽真的吗？");
+}
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.array.count;
@@ -124,6 +204,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     __weak typeof (self) weakSelf = self;
+    
+    NSLog(@"%@" , cellid);
     
     if (indexPath.row == 0) {
         SemaphoreViewController * vc = [SemaphoreViewController new];
@@ -216,6 +298,9 @@
     }
     else if (indexPath.row == 6){
         [self presentViewController:[StoreViewController new] animated:YES completion:nil];
+    }
+    else if (indexPath.row == 8){
+        [self presentViewController:[AnimtionViewController new] animated:YES completion:nil];
     }
 }
 

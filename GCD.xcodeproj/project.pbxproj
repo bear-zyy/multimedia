@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A73E7B1233B08F70075B58F /* TestOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A73E7B0233B08F70075B58F /* TestOne.m */; };
+		7A73E7B4233B09B40075B58F /* TestTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A73E7B3233B09B40075B58F /* TestTwo.m */; };
+		7A9D3D3B235888DA000A6F28 /* NSString+one.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D3D3A235888DA000A6F28 /* NSString+one.m */; };
+		7A9D3D3E235888E4000A6F28 /* NSString+two.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D3D3D235888E4000A6F28 /* NSString+two.m */; };
+		7A9D3D41235C4694000A6F28 /* TestOneSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D3D40235C4694000A6F28 /* TestOneSub.m */; };
+		7A9D3D44235D54EA000A6F28 /* AnimtionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9D3D43235D54EA000A6F28 /* AnimtionViewController.m */; };
 		A43D915120B2AE2900093F6F /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D915020B2AE2900093F6F /* SemaphoreViewController.m */; };
 		A44DD81E20CE5DE5007955AA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44DD81D20CE5DE5007955AA /* Launch Screen.storyboard */; };
 		A45500B12148BA8E004D06F2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A45500B02148BA8E004D06F2 /* libxml2.tbd */; };
@@ -74,6 +80,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A73E7AF233B08F70075B58F /* TestOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOne.h; sourceTree = "<group>"; };
+		7A73E7B0233B08F70075B58F /* TestOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOne.m; sourceTree = "<group>"; };
+		7A73E7B2233B09B40075B58F /* TestTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTwo.h; sourceTree = "<group>"; };
+		7A73E7B3233B09B40075B58F /* TestTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTwo.m; sourceTree = "<group>"; };
+		7A9D3D39235888DA000A6F28 /* NSString+one.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+one.h"; sourceTree = "<group>"; };
+		7A9D3D3A235888DA000A6F28 /* NSString+one.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+one.m"; sourceTree = "<group>"; };
+		7A9D3D3C235888E4000A6F28 /* NSString+two.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+two.h"; sourceTree = "<group>"; };
+		7A9D3D3D235888E4000A6F28 /* NSString+two.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+two.m"; sourceTree = "<group>"; };
+		7A9D3D3F235C4694000A6F28 /* TestOneSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneSub.h; sourceTree = "<group>"; };
+		7A9D3D40235C4694000A6F28 /* TestOneSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneSub.m; sourceTree = "<group>"; };
+		7A9D3D42235D54EA000A6F28 /* AnimtionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimtionViewController.h; sourceTree = "<group>"; };
+		7A9D3D43235D54EA000A6F28 /* AnimtionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimtionViewController.m; sourceTree = "<group>"; };
+		7A9D3D46235EE002000A6F28 /* TestOne+three.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestOne+three.h"; sourceTree = "<group>"; };
 		A416B3B7218AF35A00DEA39C /* UrlHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlHeader.h; sourceTree = "<group>"; };
 		A43D914F20B2AE2900093F6F /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		A43D915020B2AE2900093F6F /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
@@ -257,6 +276,12 @@
 				A4BEF54120AC0EE400B0172C /* AppDelegate.m */,
 				A4BEF54320AC0EE400B0172C /* ViewController.h */,
 				A4BEF54420AC0EE400B0172C /* ViewController.m */,
+				7A9D3D42235D54EA000A6F28 /* AnimtionViewController.h */,
+				7A9D3D43235D54EA000A6F28 /* AnimtionViewController.m */,
+				7A9D3D39235888DA000A6F28 /* NSString+one.h */,
+				7A9D3D3A235888DA000A6F28 /* NSString+one.m */,
+				7A9D3D3C235888E4000A6F28 /* NSString+two.h */,
+				7A9D3D3D235888E4000A6F28 /* NSString+two.m */,
 				A49979B620F5B22300D3E01C /* MediaCameraVC.h */,
 				A49979B820F5B22300D3E01C /* MediaCameraVC.m */,
 				D4C176202376AD5300F57F2F /* TestGitignoreVC.h */,
@@ -274,6 +299,13 @@
 				A4BEF54620AC0EE400B0172C /* Main.storyboard */,
 				A43D914F20B2AE2900093F6F /* SemaphoreViewController.h */,
 				A43D915020B2AE2900093F6F /* SemaphoreViewController.m */,
+				7A73E7AF233B08F70075B58F /* TestOne.h */,
+				7A73E7B0233B08F70075B58F /* TestOne.m */,
+				7A9D3D46235EE002000A6F28 /* TestOne+three.h */,
+				7A9D3D3F235C4694000A6F28 /* TestOneSub.h */,
+				7A9D3D40235C4694000A6F28 /* TestOneSub.m */,
+				7A73E7B2233B09B40075B58F /* TestTwo.h */,
+				7A73E7B3233B09B40075B58F /* TestTwo.m */,
 				A49979CF20F5FB5300D3E01C /* FMDBManager.h */,
 				A49979D020F5FB5300D3E01C /* FMDBManager.m */,
 				A467A179211AD9AB00D99120 /* mediaModel.h */,
@@ -487,6 +519,7 @@
 				A4E30BB820F4B694008809BD /* UIImage+CropRotate.m in Sources */,
 				A4E30BAA20F4B694008809BD /* LLSimpleCamera+Helper.m in Sources */,
 				A467A174211AD79C00D99120 /* PhotosCollectionCell.m in Sources */,
+				7A73E7B1233B08F70075B58F /* TestOne.m in Sources */,
 				A4E30BB220F4B694008809BD /* TOCropScrollView.m in Sources */,
 				A49979C920F5FAAE00D3E01C /* FMDatabasePool.m in Sources */,
 				A49979C720F5FAAE00D3E01C /* FMDatabase.m in Sources */,
@@ -502,6 +535,8 @@
 				A4E30BAF20F4B694008809BD /* TOActivityCroppedImageProvider.m in Sources */,
 				A4E30BAD20F4B694008809BD /* PureCamera.m in Sources */,
 				A49979D120F5FB5300D3E01C /* FMDBManager.m in Sources */,
+				7A73E7B4233B09B40075B58F /* TestTwo.m in Sources */,
+				7A9D3D44235D54EA000A6F28 /* AnimtionViewController.m in Sources */,
 				A458D7152189557900800B23 /* standardClass.m in Sources */,
 				A4BEF55020AC0EEB00B0172C /* main.m in Sources */,
 				A4BEF54220AC0EE400B0172C /* AppDelegate.m in Sources */,
@@ -512,9 +547,12 @@
 				A467A16B211A919700D99120 /* AuthorizingAccessTool.m in Sources */,
 				A49979CB20F5FAAE00D3E01C /* FMResultSet.m in Sources */,
 				A43D915120B2AE2900093F6F /* SemaphoreViewController.m in Sources */,
+				7A9D3D41235C4694000A6F28 /* TestOneSub.m in Sources */,
 				A49979BA20F5B22300D3E01C /* MediaCameraVC.m in Sources */,
 				A467A178211AD7F100D99120 /* PHAsset+Edit.m in Sources */,
 				A4E30BB320F4B694008809BD /* TOCropToolbar.m in Sources */,
+				7A9D3D3E235888E4000A6F28 /* NSString+two.m in Sources */,
+				7A9D3D3B235888DA000A6F28 /* NSString+one.m in Sources */,
 				A4E30BB020F4B694008809BD /* TOCropOverlayView.m in Sources */,
 				A4E30BB720F4B694008809BD /* TOCropViewControllerTransitioning.m in Sources */,
 			);
