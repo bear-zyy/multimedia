@@ -59,7 +59,6 @@
 		A4E30BB720F4B694008809BD /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E30BA520F4B694008809BD /* TOCropViewControllerTransitioning.m */; };
 		A4E30BB820F4B694008809BD /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E30BA720F4B694008809BD /* UIImage+CropRotate.m */; };
 		A4E30BB920F4B694008809BD /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E30BA920F4B694008809BD /* UIImage+FixOrientation.m */; };
-		D4C176222376AD5300F57F2F /* TestGitignoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C176212376AD5300F57F2F /* TestGitignoreVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,8 +177,6 @@
 		A4E30BA720F4B694008809BD /* UIImage+CropRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CropRotate.m"; sourceTree = "<group>"; };
 		A4E30BA820F4B694008809BD /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		A4E30BA920F4B694008809BD /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
-		D4C176202376AD5300F57F2F /* TestGitignoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestGitignoreVC.h; sourceTree = "<group>"; };
-		D4C176212376AD5300F57F2F /* TestGitignoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGitignoreVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +281,6 @@
 				7A9D3D3D235888E4000A6F28 /* NSString+two.m */,
 				A49979B620F5B22300D3E01C /* MediaCameraVC.h */,
 				A49979B820F5B22300D3E01C /* MediaCameraVC.m */,
-				D4C176202376AD5300F57F2F /* TestGitignoreVC.h */,
-				D4C176212376AD5300F57F2F /* TestGitignoreVC.m */,
 				A49979B720F5B22300D3E01C /* MediaCameraVC.xib */,
 				A467A16D211AD73200D99120 /* PhotosViewController.h */,
 				A467A16E211AD73300D99120 /* PhotosViewController.m */,
@@ -527,7 +522,6 @@
 				A4E30BB120F4B694008809BD /* TOCroppedImageAttributes.m in Sources */,
 				A458D7112189422900800B23 /* StoreViewController.m in Sources */,
 				A467A17B211AD9AB00D99120 /* mediaModel.m in Sources */,
-				D4C176222376AD5300F57F2F /* TestGitignoreVC.m in Sources */,
 				A49979C820F5FAAE00D3E01C /* FMDatabaseAdditions.m in Sources */,
 				A4BEF54520AC0EE400B0172C /* ViewController.m in Sources */,
 				A4E30BB420F4B694008809BD /* TOCropView.m in Sources */,
